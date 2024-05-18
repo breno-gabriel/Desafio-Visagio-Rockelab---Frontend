@@ -1,0 +1,85 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.header {
+  /* background-color: rgb(48, 48, 48); */
+  background-color:  #0433ff;
+  position: fixed;
+  width: 100%;
+  padding: 40px;
+}
+
+#carrinho {
+
+  background: none;
+  border: none;
+  color:#FFFFFF;
+  font-size: xx-large;
+
+}
+
+.submissionButton {
+
+  background: none;
+  border: none;
+
+}
+
+.SearchBar {
+
+  display: flex;
+  width: 90%;
+  background: rgb(255, 255, 255);
+  border-radius: 8px;
+  height: 40px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 10px 15px;
+  z-index: 0;
+  position: relative;
+  max-width: 700px;
+}
+
+.inputSearchBar {
+
+  outline: none;
+  width: 90%;
+  background: none;
+  border: none;
+  padding: 11px 0px 11px 16px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+
+}
+
+.submissionButton {
+
+  width: 40px;
+  border: none;
+  cursor: pointer;
+  background: none;
+  display: flex;
+  /* -webkit-box-align: center; */
+  align-items: center;
+  /* -webkit-box-pack: center; */
+  justify-content: center;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: #0433ff;
+  font-size: larger;
+
+}
+
+#logoName {
+
+  margin: 0; 
+  font-size: 2.5rem; 
+  font-family: "Roboto", sans-serif;
+  color: white; 
+  letter-spacing: 2px; 
+  text-transform: uppercase; 
+
+
+}
