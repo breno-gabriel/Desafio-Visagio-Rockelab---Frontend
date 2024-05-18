@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import SearchBar from "../forms/SearchBar";
 
+const Header: React.FC = () => {
+  const [searchValue, setSearchValue] = useState<string>("");
 
-function Header() {
   return (
     <header className="header">
       <div className="hero">
         <h1 className="logoName">TechTavern</h1>
-        <SearchBar></SearchBar>
-        <button className="carrinho"><AiOutlineShoppingCart></AiOutlineShoppingCart></button>
+        <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
+        <button className="carrinho"><AiOutlineShoppingCart /></button>
       </div>
     </header>
   );
