@@ -8,8 +8,15 @@ interface SearchBarProps {
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({ searchValue, setSearchValue }) => {
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+
+    e.preventDefault(); 
+
+  }
+
   return (
-    <form className="SearchBar">
+    <form className="SearchBar" onSubmit={handleSubmit}>
       <input
         type="search"
         placeholder="Buscar produto"

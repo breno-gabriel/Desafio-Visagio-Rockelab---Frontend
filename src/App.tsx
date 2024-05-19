@@ -11,7 +11,7 @@ function App() {
   return (
     <>
     <Header searchValue = {searchValue} setSearchValue = {setSearchValue}></Header>
-    <Products searchValue = {searchValue}></Products>
+    <Products searchValue = {searchValue} setSearchValue = {setSearchValue}></Products>
     </>
   )
 }
