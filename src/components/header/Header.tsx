@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Header.css";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import SearchBar from "../searchBar/SearchBar";
 
-const Header: React.FC = () => {
-  const [searchValue, setSearchValue] = useState<string>("");
+interface HeaderProps {
+  searchValue: string;
+  setSearchValue: React.Dispatch<React.SetStateAction<string>>;
+}
 
+const Header: React.FC<HeaderProps> = ({ searchValue, setSearchValue }) => {
   return (
     <header className="header">
       <div className="hero">

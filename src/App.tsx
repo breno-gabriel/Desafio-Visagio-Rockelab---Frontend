@@ -6,10 +6,12 @@ import Products from './components/products/Products';
 
 function App() {
 
+  const [searchValue, setSearchValue] = useState("");
+
   return (
     <>
-    <Header></Header>
-    <Products></Products>
+    <Header searchValue = {searchValue} setSearchValue = {setSearchValue}></Header>
+    <Products searchValue = {searchValue}></Products>
     </>
   )
 }

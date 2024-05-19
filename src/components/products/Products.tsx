@@ -1,17 +1,21 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import fetchSearchResults from "../../api/fetchProducts";
 import { Result } from "../../api/fetchProducts";
 import ProductCard from "../productCard/ProductCard";
 import './Products.css'
 
-function Products() {
+interface ProductsProps {
+  searchValue: string;
+}
+
+function Products({ searchValue }: ProductsProps) {
   const [productsList, setProductsList] = useState<Result[]>([]);
 
   useEffect(() => {
-    fetchSearchResults('Acer Nitro').then((response) => {
+    fetchSearchResults(searchValue).then((response) => {
       setProductsList(response);
     });
-  }, []);
+  }, [searchValue]);
 
   return (
     <main className="productsPage">
