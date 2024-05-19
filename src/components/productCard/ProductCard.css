@@ -1,0 +1,51 @@
+.productCard {
+
+    width: 100%;
+    max-width: 300px;
+    background-color: white ;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer; 
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+
+.productImage {
+
+    width: 100%;
+
+
+}
+
+.productInformation {
+
+
+
+}
+
+.productDescription {
+
+    font-size: 18px;
+    line-height: 23px;
+    height: auto;
+    max-height: 69px;
+
+}
+
+.productPrice {
+
+    display: block;
+    font-size: 30px;
+    margin-bottom: 4px;
+
+}
+
+.shopButton {
+
+    border-radius: 16px;
+    border: none;
+    background-color: green;
+
+}

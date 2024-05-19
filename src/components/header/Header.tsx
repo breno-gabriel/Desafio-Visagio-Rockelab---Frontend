@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import SearchBar from "../forms/SearchBar";
+import SearchBar from "../searchBar/SearchBar";
 
 const Header: React.FC = () => {
   const [searchValue, setSearchValue] = useState<string>("");
