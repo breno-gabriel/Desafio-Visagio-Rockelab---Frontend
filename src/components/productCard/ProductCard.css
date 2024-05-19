@@ -26,13 +26,13 @@
 }
 
 .productDescription {
-
     font-size: 18px;
     line-height: 23px;
     height: auto;
-    max-height: 69px;
-
-}
+    max-height: 69px; /* Limita a altura da descrição */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adiciona reticências se o texto for cortado */
+  }
 
 .productPrice {
 
@@ -40,12 +40,12 @@
     font-size: 30px;
     margin-bottom: 4px;
 
+
 }
 
 .shopButton {
-
     border-radius: 16px;
     border: none;
     background-color: green;
-
-}
+    margin-top: auto; /* Empurra o botão para a parte inferior */
+  }

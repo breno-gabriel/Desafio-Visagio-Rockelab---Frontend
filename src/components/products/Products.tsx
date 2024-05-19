@@ -5,21 +5,21 @@ import ProductCard from "../productCard/ProductCard";
 import './Products.css'
 
 function Products() {
+  const [productsList, setProductsList] = useState<Result[]>([]);
 
-    const [productsList, setProductsList] = useState<Result[]>([]);
+  useEffect(() => {
+    fetchSearchResults('Acer Nitro').then((response) => {
+      setProductsList(response);
+    });
+  }, []);
 
-    useEffect(() => {
-      fetchSearchResults('Acer Nitro').then((response) => {
-        setProductsList(response);
-      });
-    }, []);
-
-    return(
-        <main className="productsPage">
-            <ProductCard></ProductCard>
-        </main>
-    ); 
-
+  return (
+    <main className="productsPage">
+      {productsList.map(product => (
+        <ProductCard key={product.id} product={product}></ProductCard>
+      ))}
+    </main>
+  );
 }
 
-export default Products 
+export default Products;

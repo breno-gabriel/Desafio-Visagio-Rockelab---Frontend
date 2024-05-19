@@ -1,21 +1,32 @@
-import './ProductCard.css'
+import React from 'react';
+import './ProductCard.css';
 
-function ProductCard() {
-
-    return(
-        <section className = "productCard">
-            <img src="http://http2.mlstatic.com/D_937210-MLU72628282510_112023-W.jpg" alt="" className='productImage'/>
-
-            <div className='productInformation'>
-                <h2 className='productPrice'>R$2000,00</h2>
-                <h2 className='productDescription'>Descrição qualquer</h2>
-            </div>
-
-            <button className='shopButton'>adicionar ao carrinho</button>
-
-        </section>
-    ); 
-
+interface ProductCardProps {
+  product: {
+    id: string;
+    title: string;
+    price: number;
+    thumbnail: string;
+    available_quantity: number;
+  };
 }
 
-export default ProductCard; 
+const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+  const modifiedThumbnail = product.thumbnail.replace('-I.jpg', '-W.jpg');
+
+  return (
+    <section className="productCard">
+      <img src={modifiedThumbnail} alt={product.title} className="productImage" />
+      <div className="productInformation">
+        <h2 className="productPrice">{product.price.toLocaleString('pt-br', {
+          style: 'currency',
+          currency: 'BRL',
+        })}</h2>
+        <h2 className="productDescription">{product.title}</h2>
+      </div>
+      <button className="shopButton">Adicionar ao carrinho</button>
+    </section>
+  );
+};
+
+export default ProductCard;

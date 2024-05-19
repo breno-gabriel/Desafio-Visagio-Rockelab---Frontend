@@ -78,7 +78,7 @@ interface Paging {
   }
   
   async function fetchSearchResults(query: string): Promise<Result[]> {
-    const response = await fetch(`https://api.example.com/search?q=${query}`);
+    const response = await fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${query}`);
     const data: ApiResponse = await response.json();
     return data.results;
   }
