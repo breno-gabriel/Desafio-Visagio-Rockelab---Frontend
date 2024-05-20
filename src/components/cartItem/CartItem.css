@@ -1,0 +1,51 @@
+.cartItem {
+
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid #dddd;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+
+}
+
+.removeButton {
+
+    border: none;
+    background: none;
+    color: red;
+    font-size: 1.4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+.productImage {
+
+    width: 70px;
+    
+}
+
+.itemPrice {
+
+    font-size: 25px;
+    font-weight: 500;
+
+}
+
+.itemDescription {
+
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 8px;
+
+}
+
+.cartItem {
+
+    padding: 0 35px 0 10px;
+
+}

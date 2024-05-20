@@ -9,9 +9,10 @@ interface ProductCardProps {
     thumbnail: string;
     available_quantity: number;
   };
+  onAddToCart: (product: { id: string; title: string; price: number; thumbnail: string }) => void;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
   const modifiedThumbnail = product.thumbnail.replace('-I.jpg', '-W.jpg');
 
   return (
@@ -24,7 +25,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         })}</h2>
         <h2 className="productDescription">{product.title}</h2>
       </div>
-      <button className="shopButton">Adicionar ao carrinho</button>
+      <button className="shopButton" onClick={() => onAddToCart(product)}>Adicionar ao carrinho</button>
     </section>
   );
 };
