@@ -29,9 +29,9 @@
     font-size: 18px;
     line-height: 23px;
     height: auto;
-    max-height: 69px; /* Limita a altura da descrição */
+    max-height: 69px; 
     overflow: hidden;
-    text-overflow: ellipsis; /* Adiciona reticências se o texto for cortado */
+    text-overflow: ellipsis; 
   }
 
 .productPrice {
@@ -47,5 +47,5 @@
     border-radius: 16px;
     border: none;
     background-color: green;
-    margin-top: auto; /* Empurra o botão para a parte inferior */
+    margin-top: auto; 
   }
